@@ -1,0 +1,59 @@
+<html ng-app="ngAppDemo">
+
+<head>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+
+  <script src="directives/ng.table.js"></script>
+  <script src="directives/ng.form.js"></script>
+
+  <script src="app.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css"></link>
+
+  <style>
+    .paging>span {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+    .page {
+    	margin-top: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <div ng-controller="ngTableDemoController">
+
+		<nav class="navbar navbar-default navbar-fixed-top">      
+			<div class="navbar-header">
+        <a class="navbar-brand">Sample</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+	        <li><a ng-click="selectedSample='table'">ngTable Sample</a></li>
+	        <li><a ng-click="selectedSample='form'">ngForm Sample</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="page">
+
+	    <div ng-show="selectedSample=='table'">
+	      <ng-table config="tableConfig"></ng-table>
+	    </div>
+
+	    <div ng-show="selectedSample=='form'">
+	    	<div class="row">
+				  <div class="col-md-6"><ng-form config="formConfig" model="formModel"></ng-form></div>
+	  			<div class="col-md-6">{{formModel}}</div>
+	    	</div>
+	    </div>
+
+  	</div>
+
+  </div>
+</body>
+
+</html>

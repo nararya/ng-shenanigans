@@ -1,0 +1,15 @@
+{
+  "name": "ng-back-end",
+  "version": "1.0.0",
+  "description": "Back End With Dummy Data",
+  "main": "index.js",
+  "scripts": {
+    "test": "console.log()"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+		"express":"latest",
+		"body-parser":"latest"
+  }
+}
